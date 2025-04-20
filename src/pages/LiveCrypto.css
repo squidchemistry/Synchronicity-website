@@ -1,0 +1,85 @@
+.livecrypto-container {
+  background-color: #0f111a;
+  padding: 3rem 2rem;
+  color: #ffffff;
+}
+
+.livecrypto-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.livecrypto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.livecrypto-card {
+  background: #1a1d2e;
+  border: 1px solid #2e3249;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.livecrypto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.coin-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.coin-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.coin-symbol {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coin-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.coin-change {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.coin-change.positive {
+  color: #3fe27f;
+}
+
+.coin-change.negative {
+  color: #ff5d75;
+}
+
+.livecrypto-loader {
+  text-align: center;
+  padding: 4rem;
+  color: #aaa;
+  font-size: 1.2rem;
+}

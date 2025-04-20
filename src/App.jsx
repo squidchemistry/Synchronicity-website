@@ -1,20 +1,40 @@
-import React from 'react'
-import Hero from './components/Hero'
-import About from './components/About'
-import Features from './components/Features'
-import CryptoData from './components/CryptoData'
-import Contact from './components/Contact'
+// filepath: c:\Users\shres\Desktop\Synchronicity-website\synchronicity\src\App.jsx
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Features from "./components/PlatformFeatures";
+import Contact from "./components/Contact";
+import LiveCrypto from "./pages/LiveCrypto";
+import CryptoData from "./components/CryptoData";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
-const App = () => {
+function Home() {
   return (
-    <div>
+    <>
       <Hero />
       <About />
       <Features />
       <CryptoData />
       <Contact />
-    </div>
-  )
+    </>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/live-crypto" element={<LiveCrypto />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
+}
+
+export default App;
