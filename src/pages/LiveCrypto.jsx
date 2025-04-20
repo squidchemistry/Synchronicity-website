@@ -8,10 +8,13 @@ const LiveCrypto = () => {
   const [cryptoData, setCryptoData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
     const fetchCryptoData = async () => {
       try {
         setLoading(true);
+        const url = '/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false';
+        const response = await fetch(url);
         const { data } = await axios.get(
           'https://api.coingecko.com/api/v3/coins/markets',
           {
@@ -23,6 +26,8 @@ const LiveCrypto = () => {
             },
           }
         );
+      
+
         setCryptoData(data);
       } catch (err) {
         console.error('Error fetching data:', err);
