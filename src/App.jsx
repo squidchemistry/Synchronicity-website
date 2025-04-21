@@ -1,5 +1,6 @@
 // filepath: c:\Users\shres\Desktop\Synchronicity-website\synchronicity\src\App.jsx
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -11,6 +12,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
+
+
 function Home() {
   return (
     <>
@@ -19,6 +22,7 @@ function Home() {
       <Features />
       <CryptoData />
       <Contact />
+      <Analytics />
     </>
   );
 }
